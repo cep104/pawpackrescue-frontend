@@ -1,13 +1,17 @@
 import React from 'react';
+import {connect} from 'react-redux'
+import {fetchCaretakers} from './actions/fetchCaretakers'
 
 
 class App extends React.Component {
 
-  // componentDidMount(){
-  //   fetch('http://localhost:3000/api/v1/caretakers/1/dogs')
-  //   .then(res => res.json())
-  //   .then(data => console.log(data[0]))
-  // }
+  componentDidMount(){
+    this.props.fetchCaretakers({type:'FETCH_CARETAKERS', payload: {name:'Sarah Hyde'}})
+
+  }
+  
+  
+
   render(){
   return (
     <div className="App">
@@ -15,5 +19,10 @@ class App extends React.Component {
     </div>
   );}
 }
+// const mapStateToProps = (state) => {
+//   return {
+//     caretakers: state.caretakers
+//   }
+// }
+export default connect(null,{fetchCaretakers})(App);
 
-export default App;
