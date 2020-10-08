@@ -1,4 +1,4 @@
-export default function caretakerReducer(state = {caretaker: []}, action){
+export default function caretakerReducer(state = {caretakers: []}, action){
     
-    return action.payload
+    
 }
