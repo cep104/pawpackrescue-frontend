@@ -1,13 +1,13 @@
 import React from 'react'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux';
 import {fetchCaretakers} from '../actions/fetchCaretakers'
 import Caretakerlist from '../components/Caretakerlist'
 import Caretakerinput from '../components/Caretakerinput'
 
 
-class CareTakerContainer extends React.Component {
+class CaretakerContainer extends React.Component {
     componentDidMount(){
-        fetchCaretakers()
+        this.props.fetchCaretakers()
     }
     render() {
         return (
@@ -18,9 +18,9 @@ class CareTakerContainer extends React.Component {
         )
     }
 }
-const mapStatetoProps = state => {
+const mapStateToProps = (state) => {
     return {
-        caretakers: state.caretakers
-    }
-}
-export default connect(mapStatetoProps)(CareTakerContainer)
+      caretakers: state.caretakers
+    };
+  };
+export default connect(mapStateToProps, {fetchCaretakers})(CaretakerContainer)
