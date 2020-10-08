@@ -23,4 +23,5 @@ const mapStateToProps = (state) => {
       caretakers: state.caretakers
     };
   };
+ 
 export default connect(mapStateToProps, {fetchCaretakers})(CaretakerContainer)
