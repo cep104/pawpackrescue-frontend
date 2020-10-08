@@ -13,7 +13,7 @@ class CaretakerContainer extends React.Component {
         return (
             <div>
                 <Caretakerinput/>
-                <Caretakerlist/>
+                <Caretakerlist caretakers={this.props.caretakers}/>
             </div>
         )
     }

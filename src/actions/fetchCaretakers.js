@@ -2,9 +2,9 @@ export function fetchCaretakers() {
     return (dispatch) => {
     fetch('http://localhost:3000/api/v1/caretakers')
     .then(res => res.json())
-    .then(caretakers_data => dispatch({
+    .then(caretakers => dispatch({
         type:'FETCH_CARETAKERS',
-        payload: caretakers_data
+        payload: caretakers
     }))
 }
 }
