@@ -1,12 +1,12 @@
 import React from 'react';
-
+import Caretaker from './Caretaker'
 const Caretakerlist = ({caretakers}) => {
-console.log(caretakers)
+
     return (
     <div>
         <ul>
         {caretakers.map(caretaker =>
-           <li key={caretaker.id}>Foster Name: {caretaker.name} - Location: {caretaker.location} - Type: {caretaker.setting}</li>
+           <li key={caretaker.id}>< Caretaker caretaker={caretaker}/></li>
         )}
         </ul>
     </div>
