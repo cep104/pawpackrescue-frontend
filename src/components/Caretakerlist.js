@@ -8,7 +8,7 @@ const Caretakerlist = ({caretakers}) => {
     <div>
         <ul>
         {caretakers.map(caretaker =>
-            <li key={caretaker.id}><Link path={`/caretakers/${caretaker.id}`}>{caretaker.name}</Link></li>
+            <li key={caretaker.id}><Link to={`/caretakers/${caretaker.id}`}>{caretaker.name}</Link></li>
         )}
         </ul>
     </div>
