@@ -1,9 +1,11 @@
 import React from 'react'
-const Caretaker = ({caretaker}) => {
-
+const Caretaker = (props) => {
+    let caretaker = props.caretakers[props.match.params.id - 1]
     return (
         <div>
-             Name: {caretaker.name} - Location: {caretaker.location} - Home Type: {caretaker.setting}
+           {caretaker ? caretaker.name : null }
+           {caretaker ? caretaker.location : null }
+           {caretaker ? caretaker.setting : null }
         </div>
     )
 
