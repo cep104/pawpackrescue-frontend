@@ -9,6 +9,11 @@ export const createCaretakers = (data) => {
             method: 'POST',
             body: JSON.stringify(data)
         })
+        .then(res => res.json())
+        .then( newCaretaker => dispatch({
+            type:'ADD_CARETAKER',
+            payload: newCaretaker
+        }) )
 
 }
 }

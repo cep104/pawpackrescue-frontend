@@ -19,6 +19,11 @@ class Caretakerinput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.createCaretakers(this.state)
+        this.setState({
+            name:'',
+        location:'',
+        setting:'' 
+          })
 
     }
  
