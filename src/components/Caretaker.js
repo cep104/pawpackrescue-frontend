@@ -11,8 +11,8 @@ const Caretaker = (props) => {
            <h1>{caretaker ? caretaker.name : null }</h1>
            {caretaker ? caretaker.location : null }
            {caretaker ? caretaker.setting : null }
-           <DogContainer />
-           <Dogs />
+           <DogContainer caretaker={caretaker}/>
+           
         </div>
     )
 
