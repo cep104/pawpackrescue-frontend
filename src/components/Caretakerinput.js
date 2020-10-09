@@ -1,4 +1,6 @@
 import React from 'react'
+import {connect} from 'react-redux'
+import {createCaretakers} from '../actions/createCaretakers'
 
 class Caretakerinput extends React.Component {
     state = {
@@ -16,7 +18,8 @@ class Caretakerinput extends React.Component {
 
     handleSubmit = (event) => {
         event.preventDefault()
-        
+        this.props.createCaretakers
+
     }
  
     render(){
@@ -35,4 +38,4 @@ class Caretakerinput extends React.Component {
      )
  }
 }
-export default Caretakerinput
+export default connect(null,{createCaretakers})(Caretakerinput)
