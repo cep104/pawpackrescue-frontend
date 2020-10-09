@@ -1,4 +1,5 @@
 import React from 'react';
+import {Route, Link} from 'react-router-dom'
 import Caretaker from './Caretaker'
 
 const Caretakerlist = ({caretakers}) => {
@@ -7,7 +8,7 @@ const Caretakerlist = ({caretakers}) => {
     <div>
         <ul>
         {caretakers.map(caretaker =>
-           <li key={caretaker.id}>< Caretaker caretaker={caretaker}/></li>
+            <li key={caretaker.id}><Link path={`/caretakers/${caretaker.id}`}>{caretaker.name}</Link></li>
         )}
         </ul>
     </div>
