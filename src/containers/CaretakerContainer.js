@@ -1,8 +1,10 @@
 import React from 'react'
 import { connect } from 'react-redux';
+import {Route} from 'react-router-dom'
 import {fetchCaretakers} from '../actions/fetchCaretakers'
 import Caretakerlist from '../components/Caretakerlist'
 import Caretakerinput from '../components/Caretakerinput'
+
 
 
 class CaretakerContainer extends React.Component {
@@ -12,8 +14,8 @@ class CaretakerContainer extends React.Component {
     render() {
         return (
             <div>
-                <Caretakerinput/>
-                <Caretakerlist caretakers={this.props.caretakers}/>
+                <Route path='/caretakers/new' component={Caretakerinput}/>
+                <Route path='/caretakers' render={() => <Caretakerlist caretakers={this.props.caretakers}/>}/>
             </div>
         )
     }
