@@ -4,7 +4,8 @@ import DogContainer from '../containers/DogContainer'
 import Dogs from '../components/Dogs'
 const Caretaker = (props) => {
     
-    let caretaker = props.caretakers[props.match.params.id - 1]
+    // let caretaker = props.caretakers[props.match.params.id - 1]
+    let caretaker = props.caretakers.filter(caretaker => caretaker.id == props.match.params.id)[0]
     return (
         <div>
             {/* { caretaker ? null : <Redirect to='/caretakers'/>} */}
