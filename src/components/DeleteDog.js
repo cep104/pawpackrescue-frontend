@@ -4,8 +4,8 @@ import {deleteDog} from '../actions/deleteDog'
 const DeleteDog = (props) => {
     
     const handleDelete = (dog) => {
-        debugger;
-        props.deleteDog()
+        
+        props.deleteDog(dog.id, dog.caretaker_id)
     }
     let dog = props.dog
  return (
