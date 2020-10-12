@@ -15,6 +15,7 @@ import HomePage from '../components/HomePage'
 
 
 
+
 class CaretakerContainer extends React.Component {
     componentDidMount(){
         this.props.fetchCaretakers()
@@ -27,11 +28,9 @@ class CaretakerContainer extends React.Component {
                 <NavBar />
                 <Switch>
                 <Route exact path="/" component={HomePage} />
-                {/* <Route exact path="/dogs" component={Dog} /> */}
                 <Route path='/caretakers/new' component={Caretakerinput}/>
                 <Route path='/caretakers/:id' render={(routerProps)=> <Caretaker {...routerProps} caretakers={this.props.caretakers}/> } />
                 <Route path='/caretakers' render={(routerProps) => <Caretakerlist {...routerProps} caretakers={this.props.caretakers}/>}/>
-                
                 </Switch>
             </div>
         )

@@ -4,12 +4,13 @@ import {Link} from 'react-router-dom'
 const NavBar = (props) => {
 
   return (
-    <div>
-      <Link to='/'> Home </Link>
-      <Link to='/caretakers' style={{paddingRight: '10px'}}>Fosters  </Link>
-      <Link to='/caretakers/new'> Add Foster</Link>
-      <Link to='/dogs' style={{paddingRight: '10px'}}>Dogs</Link>
-
+    <div id='nav'>
+      <ul>
+      <li><Link to='/'> Home </Link></li>
+      <li><Link to='/caretakers'>Fosters  </Link></li>
+      <li><Link to='/caretakers/new'> Add Foster</Link></li>
+      <li><Link to='/dogs'>Dogs</Link></li>
+      </ul>
       
     </div>
 

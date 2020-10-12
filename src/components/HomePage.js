@@ -1,7 +1,9 @@
 import React from 'react';
 const HomePage = () => {
  return (
-     <div>Hello</div>
+     <div>
+         <div id='heroimg'><img src='images/dogshelter.jpg'/></div>
+     </div>
  )
 }
 export default HomePage

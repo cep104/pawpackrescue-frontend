@@ -1,5 +1,55 @@
 body {
     background-color: #B7E6DB;
-    color: white;
+    color: #999073;
+    margin:0 auto;
+    font-family: 'Poppins', sans-serif;
+   
+}
+#heroimg {
+    width:100%;
+}
+img {
+    width:100%;
+    height:auto;
     
 }
+ul {
+    text-align:center;
+}
+ul li {
+  display:inline;
+  margin-right: 10px;
+  font-size:1.5em;
+}
+
+ul li a {
+    text-decoration: none;
+    color: #999073;
+}
+
+ul li a:hover {
+    color: brown;
+}
+
+#editform {
+
+    display: none;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 30%;
+    float:left;
+    margin:2%;
+
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container {
+    padding: 2px 16px;
+  }
+
