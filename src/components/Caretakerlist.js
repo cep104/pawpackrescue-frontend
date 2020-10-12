@@ -3,7 +3,7 @@ import {Route, Link} from 'react-router-dom'
 import Caretaker from './Caretaker'
 
 const Caretakerlist = ({caretakers}) => {
-
+    
     return (
     <div>
         <ul>

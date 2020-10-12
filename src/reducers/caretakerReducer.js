@@ -17,6 +17,7 @@ export default function caretakerReducer(state = {caretakers: []}, action){
                 }
             })
                 return {...state, caretakers: caretakers}
+                
         case 'DELETE_DOG':
             let caretakersNew = state.caretakers.map(caretaker => {
                     
