@@ -1,4 +1,5 @@
 import React from 'react'
+import {Redirect} from 'react-dom'
 import {connect} from 'react-redux'
 import {createCaretakers} from '../actions/createCaretakers'
 
@@ -19,6 +20,7 @@ class Caretakerinput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.createCaretakers(this.state)
+        this.props.history.push('/caretakers');
         this.setState({
             name:'',
         location:'',

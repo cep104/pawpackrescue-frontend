@@ -31,6 +31,7 @@ class DogInput extends React.Component {
     handleSubmit = (event) => {
         event.preventDefault()
         this.props.createDog(this.state, this.props.caretaker.id)
+        
         this.setState({
             name:'',
             age:'' ,
