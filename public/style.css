@@ -54,13 +54,13 @@ img {
   display: flex;
   justify-content: space-around;
 }
-ul li {
+#nav ul li {
   display:inline;
   margin-right: 5%;
   font-size:1.2em;
 }
 
-ul li a {
+#nav ul li a {
     text-decoration: none;
     color: #999073;
 }
@@ -116,6 +116,21 @@ ul li a:hover {
   #careform form h3 {
       margin-top: 0;
   }
+
+  #caretakers {
+      text-align: center;
+      background-image: url("images/carepage.jpg");
+      background-repeat: no-repeat;
+    background-size: cover;
+    height: 768px;
+
+  }
+  #caretakers .card {
+      text-align: center;
+      color:#999073;
+      background-color:white;
+  }
+
 
   
 

@@ -5,12 +5,19 @@ import Caretaker from './Caretaker'
 const Caretakerlist = ({caretakers}) => {
     
     return (
-    <div>
-        <ul>
+    <div id='caretakers'>
+        
         {caretakers.map(caretaker =>
-            <li key={caretaker.id}><Link to={`/caretakers/${caretaker.id}`}>{caretaker.name}</Link></li>
+            <Link to={`/caretakers/${caretaker.id}`}>
+                <div class='card' key={caretaker.id}>
+                    <container>
+                        <h4>{caretaker.name}</h4>
+                        <h6>{caretaker.location}</h6>
+                    </container>
+                </div>
+            </Link>
         )}
-        </ul>
+        
     </div>
 )
 }
