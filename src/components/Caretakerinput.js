@@ -31,14 +31,18 @@ class Caretakerinput extends React.Component {
  
     render(){
         return(
-            <div>
+            <div id='careform'>
+                <h1>JOIN US!</h1>
+                <img src='/images/dogcare.jpg'/>
+                
                 <form onSubmit={this.handleSubmit}>
+                    <h3>FOSTER FORM:</h3>
                     <label>Name: </label>
-                    <input type='text' placeholder = 'Name' name='name' value={this.state.name} onChange={this.handleChange}/><br/>
+                    <input type='text' placeholder = 'Name' name='name' value={this.state.name} onChange={this.handleChange}/><br/><br/>
                     <label>Location: </label>
-                    <input type='text' placeholder = 'Location' name='location' value={this.state.location} onChange={this.handleChange}/><br/>
+                    <input type='text' placeholder = 'Location' name='location' value={this.state.location} onChange={this.handleChange}/><br/><br/>
                     <label >Type: </label>
-                    <input type='text' placeholder = 'Type' name='setting' value={this.state.setting} onChange={this.handleChange}/><br/>
+                    <input type='text' placeholder = 'Type' name='setting' value={this.state.setting} onChange={this.handleChange}/><br/><br/>
                     <input type='submit' />
                 </form>
             </div>
