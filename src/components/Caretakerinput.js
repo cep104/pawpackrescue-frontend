@@ -41,8 +41,8 @@ class Caretakerinput extends React.Component {
                     <input type='text' placeholder = 'Name' name='name' value={this.state.name} onChange={this.handleChange}/><br/><br/>
                     <label>Location: </label>
                     <input type='text' placeholder = 'Location' name='location' value={this.state.location} onChange={this.handleChange}/><br/><br/>
-                    <label >Type: </label>
-                    <input type='text' placeholder = 'Type' name='setting' value={this.state.setting} onChange={this.handleChange}/><br/><br/>
+                    <label >Living Situation: </label>
+                    <input type='text' placeholder = 'Home, Apartment, ect.' name='setting' value={this.state.setting} onChange={this.handleChange}/><br/><br/>
                     <input type='submit' />
                 </form>
             </div>
