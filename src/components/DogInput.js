@@ -14,7 +14,7 @@ class DogInput extends React.Component {
         size:'Small',
         bio: '',
         medication:'',
-        rescue_date: new Date()
+        img_src: ''
     }
 
     handleChange = (event) => {
@@ -43,7 +43,7 @@ class DogInput extends React.Component {
             size:'Small',
             bio: '',
             medication:'',
-            rescue_date: ''
+            img_src: ''
         })
       }
     
@@ -71,6 +71,8 @@ class DogInput extends React.Component {
                     <input type='text' placeholder = 'Medication for Dog' name='medication' value={this.state.medication} onChange={this.handleChange}/><br/>
                     <label>Bio:</label>
                     <textarea placeholder = 'Description of Dog' name='bio' value={this.bio} onChange={this.handleChange}></textarea><br/>
+                    <label for="img_src">Image: </label><br></br>
+                    <input type='text' placeholder = 'Enter URL' name='img_src' value={this.state.img_src} onChange={this.handleChange}/><br/>
                     <input type='submit' />
                 </form>
             </div>
