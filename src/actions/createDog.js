@@ -11,6 +11,12 @@ export const createDog = (dog, caretakerId) => {
 
             })
             .then(response => response.json())
-            .then(dog => dispatch({type:'CREATE_DOG', payload: dog}) )
-        }
-    }
+            .then(dog => {
+                if (dog.error){
+                  alert('all fields must be filled out')
+                }else{dispatch({type: 'CREATE_DOG', payload: dog})
+              }
+            }
+            )
+            }
+          }

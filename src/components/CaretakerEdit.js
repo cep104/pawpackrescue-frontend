@@ -41,6 +41,7 @@ class CaretakerEdit extends React.Component {
                     <input type='text' placeholder = 'Type' name='setting' value={this.state.setting} onChange={this.handleChange}/><br/>
                     <input type='submit' />
                 </form>
+                
             </div>
      )
  }

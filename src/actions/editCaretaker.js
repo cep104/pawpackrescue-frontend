@@ -10,7 +10,14 @@ export const editCaretaker = (data) => {
           body: JSON.stringify(data)
         })
         .then(response => response.json())
-        .then(caretaker => dispatch({type: 'EDIT_CARETAKER', payload: caretaker}))
+        .then(caretaker => {
+          if (caretaker.error){
+            alert('all fields must be filled out')
+          }else{dispatch({type: 'EDIT_CARETAKER', payload: caretaker})
+        }
       }
-    
+      )
+      }
     }
+    
+   

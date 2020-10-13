@@ -13,7 +13,8 @@ class DogInput extends React.Component {
         good_with:'',
         size:'Small',
         bio: '',
-        medication:''
+        medication:'',
+        rescue_date: new Date()
     }
 
     handleChange = (event) => {
@@ -41,7 +42,8 @@ class DogInput extends React.Component {
             good_with:'',
             size:'Small',
             bio: '',
-            medication:''
+            medication:'',
+            rescue_date: ''
         })
       }
     
@@ -49,8 +51,9 @@ class DogInput extends React.Component {
         return(
             <div>
                 <form onSubmit={ this.handleSubmit }>
+                    <h3>ADD A NEW DOG!</h3>
                     <label>Name: </label>
-                    <input type='text' placeholder = 'Name' name='name' value={this.state.name} onChange={this.handleChange}/><br/>
+                    <input type='text' placeholder = 'Name' name='name' value={this.state.name} onChange={this.handleChange} /><br/>
                     <label>Age: </label>
                     <input type='text' placeholder = 'Age' name='age' value={this.state.age} onChange={this.handleChange}/><br/>
                     <label>Gender: </label>
@@ -67,8 +70,7 @@ class DogInput extends React.Component {
                     <label>Medication: </label>
                     <input type='text' placeholder = 'Medication for Dog' name='medication' value={this.state.medication} onChange={this.handleChange}/><br/>
                     <label>Bio:</label>
-                    <textarea placeholder = 'Description of Dog' name='bio' value={this.bio} onChange={this.handleChange}></textarea>
-                    
+                    <textarea placeholder = 'Description of Dog' name='bio' value={this.bio} onChange={this.handleChange}></textarea><br/>
                     <input type='submit' />
                 </form>
             </div>

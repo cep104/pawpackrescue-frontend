@@ -1,5 +1,4 @@
 import React from 'react';
-import {Route} from 'react-router-dom'
 import CaretakerContainer from './containers/CaretakerContainer'
 import AllDogsContainer from './containers/AllDogsContainer';
 
