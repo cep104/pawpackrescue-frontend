@@ -49,7 +49,7 @@ class DogInput extends React.Component {
     
     render() {
         return(
-            <div>
+            <div id='dogform'>
                 <form onSubmit={ this.handleSubmit }>
                     <h3>ADD A NEW DOG!</h3>
                     <label>Name: </label>

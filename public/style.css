@@ -81,6 +81,7 @@ ul li a:hover {
     display:inline-block;
     margin:2%;
     
+    
 
   }
   
@@ -130,6 +131,28 @@ ul li a:hover {
       color:#999073;
       background-color:white;
   }
+
+  #dogform {
+      width:40%;
+      background-color: white;
+      
+  }
+
+  #dogcards > * {
+    vertical-align: top;
+    background-color: white;
+    
+  }
+
+  #dogcards .card a{
+    text-decoration: none;
+    color:#999073;
+    font-size: 1.2em;
+  }
+
+ 
+
+ 
 
 
   

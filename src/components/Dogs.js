@@ -5,9 +5,19 @@ import {Link} from 'react-router-dom'
 const Dogs = (props) => {
 
     return (
-        <div>
+        <div id='dogcards'>
             {props.dogs && props.dogs.map(dog => 
-               <div className='card' key={dog.id}><img src='https://dummyimage.com/200x200/000000/fff'/><div className='container'><Link to={`/dogs/${dog.id}`}>{dog.name}</Link><DeleteDog dog={dog}/></div></div>
+               <div className='card' key={dog.id}>
+                   <img src={dog.img_src}/>
+                   <div className='container'>
+                       <Link to={`/dogs/${dog.id}`}>{dog.name}</Link><br/>
+                       <p>Age: {dog.age}</p>
+                       <p>Gender: {dog.gender}</p>
+                       <p>Gets along with: {dog.good_with}</p>
+                       <p>{dog.bio}</p>
+                       <DeleteDog dog={dog}/>
+                    </div>
+                </div>
             )}
         </div>
     )
