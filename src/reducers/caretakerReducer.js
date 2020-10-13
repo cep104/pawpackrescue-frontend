@@ -4,8 +4,22 @@ export default function caretakerReducer(state = {caretakers: []}, action){
       
         case 'FETCH_CARETAKERS':
             return { caretakers: action.payload }
+
         case 'ADD_CARETAKER':
             return {...state, caretakers:[...state.caretakers, action.payload]}
+
+        case 'EDIT_CARETAKER':
+                let caretakerUpdate = state.caretakers.map(caretaker => {
+                        
+                    if (caretaker.id === action.payload.id) {
+                              
+                            return action.payload
+                    } else {
+                            return caretaker
+                    }
+                })
+                return {...state, caretakers: caretakerUpdate}
+                
         case 'CREATE_DOG':
             let caretakers = state.caretakers.map(caretaker => {
                     
@@ -29,17 +43,7 @@ export default function caretakerReducer(state = {caretakers: []}, action){
             }
         })
             return {...state, caretakers: caretakersNew}
-        case 'EDIT_CARETAKER':
-            let caretakerUpdate = state.caretakers.map(caretaker => {
-                    
-                if (caretaker.id === action.payload.id) {
-                          
-                        return action.payload
-                } else {
-                        return caretaker
-                }
-            })
-            return {...state, caretakers: caretakerUpdate}
+        
         default: 
             return state
     } 

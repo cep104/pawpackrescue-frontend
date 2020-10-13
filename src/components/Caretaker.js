@@ -1,7 +1,5 @@
 import React from 'react'
-import {Redirect} from 'react-router-dom'
 import DogContainer from '../containers/DogContainer'
-import Dogs from '../components/Dogs'
 import CaretakerEdit from './CaretakerEdit'
 const Caretaker = (props) => {
 

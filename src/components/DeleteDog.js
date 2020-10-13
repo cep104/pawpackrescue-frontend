@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {deleteDog} from '../actions/deleteDog'
+import {deleteDog} from '../actions/dogAction'
 const DeleteDog = (props) => {
     
     const handleDelete = (dog) => {

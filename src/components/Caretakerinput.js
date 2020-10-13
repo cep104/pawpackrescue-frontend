@@ -1,7 +1,7 @@
 import React from 'react'
 import {Redirect} from 'react-dom'
 import {connect} from 'react-redux'
-import {createCaretakers} from '../actions/createCaretakers'
+import {createCaretakers} from '../actions/caretakerAction'
 
 class Caretakerinput extends React.Component {
     state = {

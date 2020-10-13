@@ -1,6 +1,6 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {editCaretaker} from '../actions/editCaretaker'
+import {editCaretaker} from '../actions/caretakerAction'
 
 class CaretakerEdit extends React.Component {
     state = {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { createDog } from '../actions/createDog'
+import { createDog } from '../actions/dogAction'
 
 class DogInput extends React.Component {
     

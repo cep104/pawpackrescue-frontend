@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import {Route, Switch} from 'react-router-dom'
-import {fetchCaretakers} from '../actions/fetchCaretakers'
+import {fetchCaretakers} from '../actions/caretakerAction'
 import Caretakerlist from '../components/Caretakerlist'
 import Caretakerinput from '../components/Caretakerinput'
 import Caretaker from '../components/Caretaker'
@@ -26,12 +26,14 @@ class CaretakerContainer extends React.Component {
         return (
             <div>
                 <NavBar />
+                <div id='wrapper'>
                 <Switch>
                 <Route exact path="/" component={HomePage} />
                 <Route path='/caretakers/new' component={Caretakerinput}/>
                 <Route path='/caretakers/:id' render={(routerProps)=> <Caretaker {...routerProps} caretakers={this.props.caretakers}/> } />
                 <Route path='/caretakers' render={(routerProps) => <Caretakerlist {...routerProps} caretakers={this.props.caretakers}/>}/>
                 </Switch>
+                </div>
             </div>
         )
     }

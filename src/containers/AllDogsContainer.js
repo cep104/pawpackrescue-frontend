@@ -1,7 +1,7 @@
 import React from 'react'
 import {Route, Switch} from 'react-router-dom'
 import { connect } from 'react-redux';
-import {fetchDogs} from '../actions/fetchDogs'
+import {fetchDogs} from '../actions/dogAction'
 import Dog from '../components/Dog'
 import AllDogs from '../components/AllDogs'
 
