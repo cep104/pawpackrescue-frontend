@@ -2,27 +2,18 @@ import React from 'react'
 import { connect } from 'react-redux';
 import DogInput from '../components/DogInput'
 import Dogs from '../components/Dogs'
-
-
-
 class DogContainer extends React.Component {
- 
    render(){
-       
+       console.log('caretaker', this.props.caretaker)
        return(
            <div>
-               <Dogs dogs={this.props.caretaker && this.props.caretaker.dogs}/>
+               <Dogs dogs={this.props.dogs} careTakerId={this.props.caretaker.id}/>
                <DogInput caretaker={this.props.caretaker}/>
-               
-               
-               
-               
            </div>
        )
    } 
 }
-
-
- 
-export default connect()(DogContainer)
-
+const mapStateToProps = state => {
+    return { dogs: state.dogs }
+}
+export default connect(mapStateToProps)(DogContainer)

@@ -1,9 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux'
 import { createDog } from '../actions/dogAction'
-
 class DogInput extends React.Component {
-    
     state = {
         name:'',
         age:'' ,
@@ -16,23 +14,18 @@ class DogInput extends React.Component {
         medication:'',
         img_src: ''
     }
-
     handleChange = (event) => {
         let updatedValue = event.target.value
         if (updatedValue === "true" || updatedValue == "false") {
             updatedValue = JSON.parse(updatedValue);
         } 
         this.setState({
-            
             [event.target.name]: updatedValue
-
         })
     }
-
     handleSubmit = (event) => {
         event.preventDefault()
-        this.props.createDog(this.state, this.props.caretaker.id)
-        
+        this.props.createDog({ dog: this.state, caretaker_id: this.props.caretaker.id})
         this.setState({
             name:'',
             age:'' ,
@@ -46,7 +39,6 @@ class DogInput extends React.Component {
             img_src: ''
         })
       }
-    
     render() {
         return(
             <div id='dogform'>

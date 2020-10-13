@@ -1,12 +1,12 @@
 import React from 'react';
 import DeleteDog from './DeleteDog'
-
 import {Link} from 'react-router-dom'
-const Dogs = (props) => {
-   
+const Dogs = ({careTakerId, dogs}) => {
+    if (dogs.length === 0) return null;
+    const d = dogs.filter(dog => dog.caretaker_id === careTakerId)
     return (
         <div id='dogcards'>
-            {props.dogs && props.dogs.map(dog => 
+            {d && d.map(dog => 
                <div className='card' key={dog.id}>
                    <img src={dog.img_src}/>
                    <div className='container'>
@@ -25,6 +25,5 @@ const Dogs = (props) => {
             )}
         </div>
     )
-
 }
 export default Dogs

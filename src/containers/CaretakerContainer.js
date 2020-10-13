@@ -7,22 +7,11 @@ import Caretakerinput from '../components/Caretakerinput'
 import Caretaker from '../components/Caretaker'
 import NavBar from '../components/NavBar'
 import HomePage from '../components/HomePage'
-
-
-
-
-
-
-
-
-
 class CaretakerContainer extends React.Component {
     componentDidMount(){
         this.props.fetchCaretakers()
     }
-    
     render() {
-       
         return (
             <div>
                 <NavBar />
@@ -40,8 +29,7 @@ class CaretakerContainer extends React.Component {
 }
 const mapStateToProps = (state) => {
     return {
-      caretakers: state.caretakers.caretakers
+      caretakers: state.caretakers
     };
   };
- 
 export default connect(mapStateToProps, {fetchCaretakers})(CaretakerContainer)

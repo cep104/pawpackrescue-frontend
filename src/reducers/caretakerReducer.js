@@ -1,49 +1,19 @@
-export default function caretakerReducer(state = {caretakers: []}, action){
+export default function caretakerReducer(state = [], action){
     // debugger
     switch(action.type){
-      
         case 'FETCH_CARETAKERS':
-            return { caretakers: action.payload }
-
+            return action.payload
         case 'ADD_CARETAKER':
-            return {...state, caretakers:[...state.caretakers, action.payload]}
-
+            return [...state, action.payload]
         case 'EDIT_CARETAKER':
-                let caretakerUpdate = state.caretakers.map(caretaker => {
-                        
+                let caretakerUpdate = state.map(caretaker => {
                     if (caretaker.id === action.payload.id) {
-                              
                             return action.payload
                     } else {
                             return caretaker
                     }
                 })
-                return {...state, caretakers: caretakerUpdate}
-                
-        case 'CREATE_DOG':
-            let caretakers = state.caretakers.map(caretaker => {
-                    
-                if (caretaker.id === action.payload.id) {
-                      
-                    return action.payload
-                } else {
-                    return caretaker
-                }
-            })
-                return {...state, caretakers: caretakers}
-                
-        case 'DELETE_DOG':
-            let caretakersNew = state.caretakers.map(caretaker => {
-                    
-            if (caretaker.id === action.payload.id) {
-                      
-                    return action.payload
-            } else {
-                    return caretaker
-            }
-        })
-            return {...state, caretakers: caretakersNew}
-        
+                return caretakerUpdate
         default: 
             return state
     } 
