@@ -42,7 +42,7 @@ class DogInput extends React.Component {
     render() {
         return(
             <div id='dogform'>
-                <form onSubmit={ this.handleSubmit }>
+                <form id='dogformform' onSubmit={ this.handleSubmit }>
                     <h3>ADD A NEW DOG!</h3>
                     <label>Name: </label>
                     <input type='text' placeholder = 'Name' name='name' value={this.state.name} onChange={this.handleChange} /><br/>

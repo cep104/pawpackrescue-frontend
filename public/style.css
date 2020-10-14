@@ -133,9 +133,17 @@ ul li a:hover {
   }
 
   #dogform {
-      width:40%;
+      width:80%;
       background-color: white;
+      margin-left: 10%;
+      margin-bottom:10%;
       
+      
+  }
+
+  #dogformform{
+    display: block;
+    
   }
 
   #dogcards > * {
@@ -149,6 +157,42 @@ ul li a:hover {
     color:#999073;
     font-size: 1.2em;
   }
+
+  #caretakerinfo {
+    text-align: center;
+
+  }
+
+  #dogimg{
+    width:40%;
+    margin-top: 5%;
+    display:inline-block;
+  }
+  #dogimg img{
+    border: 5px solid #999073;
+  }
+
+  #dogfacts{
+    display:inline-block;
+    padding:2%;
+  }
+  #careimg{
+    margin-top: 5%;
+  
+    width:30%;
+    text-align:center;
+    display:inline-block;
+  }
+
+  
+
+
+
+ 
+
+ 
+
+ 
 
  
 

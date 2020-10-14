@@ -7,7 +7,8 @@ class Caretakerinput extends React.Component {
     state = {
         name:'',
         location:'',
-        setting:'' 
+        setting:'',
+        img_src:'' 
     }
 
     handleChange = (event) => {
@@ -24,7 +25,8 @@ class Caretakerinput extends React.Component {
         this.setState({
             name:'',
         location:'',
-        setting:'' 
+        setting:'',
+        img_src: ''
           })
 
     }
@@ -43,6 +45,8 @@ class Caretakerinput extends React.Component {
                     <input type='text' placeholder = 'Location' name='location' value={this.state.location} onChange={this.handleChange}/><br/><br/>
                     <label >Living Situation: </label>
                     <input type='text' placeholder = 'Home, Apartment, ect.' name='setting' value={this.state.setting} onChange={this.handleChange}/><br/><br/>
+                    <label >Portfolio Picture: </label>
+                    <input type='text' placeholder = 'Enter URL' name='img_src' value={this.state.img_src} onChange={this.handleChange}/><br/>
                     <input type='submit' />
                 </form>
             </div>

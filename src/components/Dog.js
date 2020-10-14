@@ -5,10 +5,21 @@ const Dog = ({ match, dogs }) => {
     return (
         <>
         <div>
-            <h2>Name: {dog ? dog.name : null }</h2>
-            <p>Bio: {dog ? dog.bio : null }</p>
+            <div id='dogimg'>
+                <img src={dog.img_src} />
+            </div>
+            <div id='dogfacts'>
+                <h2>{dog ? dog.name : null }</h2>
+                <p>Breed: {dog ? dog.breed : null }</p>
+                <p>Age: {dog ? dog.age : null }</p>
+                <p>Size: {dog ? dog.size : null }</p>
+                <p>Gets Along with: {dog ? dog.good_with: null }</p>
+                <p>Medication Needs: {dog ? dog.medication : null }</p>
+                <p>Bio: {dog ? dog.bio : null }</p>
+            </div>
         </div>
         </>
     );
 };
 export default Dog;
+
