@@ -80,6 +80,7 @@ ul li a:hover {
     width: 25%;
     display:inline-block;
     margin:2%;
+
     
     
 
@@ -87,6 +88,7 @@ ul li a:hover {
   
   .card:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    background-color: white;
   }
   
   .container {
@@ -133,9 +135,9 @@ ul li a:hover {
   }
 
   #dogform {
-      width:80%;
+      width:100%;
       background-color: white;
-      margin-left: 10%;
+      
       margin-bottom:10%;
       
       
@@ -151,10 +153,12 @@ ul li a:hover {
     background-color: white;
     
   }
-
+.card a {
+  text-decoration: none;
+  color:#999073;
+}
   #dogcards .card a{
-    text-decoration: none;
-    color:#999073;
+    
     font-size: 1.2em;
   }
 
@@ -164,21 +168,24 @@ ul li a:hover {
   }
 
   #dogimg{
-    width:40%;
+    text-align: center;
     margin-top: 5%;
+    width: 100%;
     display:inline-block;
+    
   }
   #dogimg img{
     border: 5px solid #999073;
+    width:40%;
   }
 
   #dogfacts{
-    display:inline-block;
-    padding:2%;
+    padding-left:5%;
+    
+    background-color: aliceblue;
   }
   #careimg{
     margin-top: 5%;
-  
     width:30%;
     text-align:center;
     display:inline-block;
