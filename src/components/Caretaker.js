@@ -21,10 +21,11 @@ const Caretaker = (props) => {
    
     // let caretaker = props.caretakers[props.match.params.id - 1]
     let caretaker = props.caretakers.filter(caretaker => caretaker.id == props.match.params.id)[0]
+    if (caretaker.img_src == ''){ caretaker.img_src = 'https://www.clipartkey.com/mpngs/m/207-2074740_pawprint-svg-bear-transparent-dog-paw-print.png'}
     return (
         <div id='caretakerinfo'>
             <div id='careimg'>
-                <img src={caretaker.img_src} />
+                <img src={caretaker.img_src} alt={caretaker.name}/>
             </div>
             <div id='careinfoinfo'>
                 <h1>{caretaker ? caretaker.name : null }</h1>

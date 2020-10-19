@@ -7,14 +7,14 @@ const Caretakerlist = ({caretakers}) => {
     <div id='caretakers'>
         
         {caretakers.map(caretaker =>
+            <div className='card' key={caretaker.id}>
             <Link to={`/caretakers/${caretaker.id}`}>
-                <div class='card' key={caretaker.id}>
-                    <container>
+                    <div>
                         <h4>{caretaker.name}</h4>
                         <h6>{caretaker.location}</h6>
-                    </container>
-                </div>
+                    </div>
             </Link>
+            </div>
         )}
         
     </div>

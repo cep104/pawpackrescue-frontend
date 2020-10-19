@@ -3,11 +3,11 @@ import {Link} from 'react-router-dom'
 const HomePage = () => {
  return (
      <div id='homepage'>
-         <div id='heroimg'><img src='images/dogshelter.jpg'/></div>
+         <div id='heroimg'><img src='images/dogshelter.jpg' alt='hero dog with man'/></div>
          <h1>PAW PACK RESCUE</h1>
          <h3>Fostering Database</h3>
          <div id='homecards'>
-         <Link to='/caretakers/new'><div className='card'><img src='images/fostertoday.jpg'/><div class='container'>Join The Fostering Team Today!</div></div></Link>
+         <Link to='/caretakers/new'><div className='card'><img src='images/fostertoday.jpg' alt='person and dog'/><div className='container'>Join The Fostering Team Today!</div></div></Link>
          <p>Paw Pack Rescue is an animal rescue that protects the 
              lives and the welfare of animals. We believe every animal has the 
              right to a well-balanced, socialized and fulfilled life. We take on 
@@ -18,7 +18,7 @@ const HomePage = () => {
              and caregiving within our communities by building awareness, appreciation 
              and respect for all animals and the environment.</p>
          </div>
-         <iframe width="560" height="315" src="https://www.youtube.com/embed/7Zxm2wcgeYI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/7Zxm2wcgeYI" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen title="myFrame"></iframe>
      </div>
  )
 }

@@ -34,7 +34,7 @@ class Caretakerinput extends React.Component {
         return(
             <div id='careform'>
                 <h1>JOIN US!</h1>
-                <img src='/images/dogcare.jpg'/>
+                <img src='/images/dogcare.jpg' alt='dogs'/>
                 
                 <form onSubmit={this.handleSubmit}>
                     <h3>FOSTER FORM:</h3>

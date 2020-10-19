@@ -5,12 +5,13 @@ const Dog = ({ match, dogs }) => {
     
     let dog = dogs.find(d => d.id === parseInt(match.params.id))
     if (dog.house_trained === true) { dog.house_trained = 'Yes'} 
-    else { dog.house_trained = 'No'}
+    if (dog.house_trained === false) { dog.house_trained = 'No'} 
+    if (dog.img_src == ''){ dog.img_src = 'https://www.clipartkey.com/mpngs/m/207-2074740_pawprint-svg-bear-transparent-dog-paw-print.png'}
     return (
         <>
         <div>
             <div id='dogimg'>
-                <img src={dog.img_src} />
+                <img src={dog.img_src} alt={dog.name}/>
             </div>
             <div id='dogfacts'>
                 <h2>{dog ? dog.name : null }</h2>

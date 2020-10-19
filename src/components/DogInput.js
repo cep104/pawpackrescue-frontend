@@ -16,7 +16,7 @@ class DogInput extends React.Component {
     }
     handleChange = (event) => {
         let updatedValue = event.target.value
-        if (updatedValue === "true" || updatedValue == "false") {
+        if (updatedValue === "true" || updatedValue === "false") {
             updatedValue = JSON.parse(updatedValue);
         } 
         this.setState({
@@ -63,7 +63,7 @@ class DogInput extends React.Component {
                     <input type='text' placeholder = 'Medication for Dog' name='medication' value={this.state.medication} onChange={this.handleChange}/><br/>
                     <label>Bio:</label>
                     <textarea placeholder = 'Description of Dog' name='bio' value={this.bio} onChange={this.handleChange}></textarea><br/>
-                    <label for="img_src">Image: </label><br></br>
+                    <label >Image: </label><br></br>
                     <input type='text' placeholder = 'Enter URL' name='img_src' value={this.state.img_src} onChange={this.handleChange}/><br/>
                     <input type='submit' />
                 </form>

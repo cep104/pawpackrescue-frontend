@@ -7,6 +7,7 @@ const Dogs = ({careTakerId, dogs}) => {
     return (
         <div id='dogcards'>
             {d && d.map(dog => 
+            
                <div className='card' key={dog.id}>
                    <img src={dog.img_src}/>
                    <div className='container'>
@@ -20,3 +21,4 @@ const Dogs = ({careTakerId, dogs}) => {
     )
 }
 export default Dogs
+
