@@ -14,7 +14,7 @@ const Dogs = props => {
                  </Link>
     })
     return (
-        <div >{dogs}</div>
+        <div id='alldogs'>{dogs}</div>
     );
 };
 export default Dogs;

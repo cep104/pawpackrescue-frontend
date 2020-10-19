@@ -191,6 +191,21 @@ ul li a:hover {
     display:inline-block;
   }
 
+  #alldogs {
+    background-image: url("images/dogrun.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 768px;
+  }
+  
+  #alldogs .card {
+    background-color: #B7E6DB;
+  }
+
+  #alldogs .card:hover {
+    background-color: white;
+  }
+
   
 
 
