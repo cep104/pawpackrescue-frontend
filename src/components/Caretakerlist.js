@@ -1,6 +1,5 @@
 import React from 'react';
-import {Route, Link} from 'react-router-dom'
-import Caretaker from './Caretaker'
+import { Link } from 'react-router-dom'
 
 const Caretakerlist = ({caretakers}) => {
     
