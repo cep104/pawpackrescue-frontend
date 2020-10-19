@@ -22,9 +22,9 @@ class CaretakerEdit extends React.Component {
         this.props.editCaretaker(caretaker)
         this.setState({
             name:'',
-        location:'',
-        setting:'' 
-          })
+            location:'',
+            setting:'' 
+        })
 
     }
  

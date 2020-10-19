@@ -1,5 +1,4 @@
 import React from 'react'
-import {Redirect} from 'react-dom'
 import {connect} from 'react-redux'
 import {createCaretakers} from '../actions/caretakerAction'
 
@@ -24,10 +23,10 @@ class Caretakerinput extends React.Component {
         this.props.history.push('/caretakers');
         this.setState({
             name:'',
-        location:'',
-        setting:'',
-        img_src: ''
-          })
+            location:'',
+            setting:'',
+            img_src: ''
+        })
 
     }
  
@@ -50,7 +49,7 @@ class Caretakerinput extends React.Component {
                     <input type='submit' />
                 </form>
             </div>
-     )
- }
+        )
+    }
 }
 export default connect(null,{createCaretakers})(Caretakerinput)

@@ -10,7 +10,7 @@ const Dogs = ({careTakerId, dogs}) => {
                <div className='card' key={dog.id}>
                    <img src={dog.img_src}/>
                    <div className='container'>
-                       <Link to={`/dogs/${dog.id}`}>{dog.name}</Link><br/>
+                       <Link to={`/dogs/${dog.id}`}>{dog.name}</Link><br/><br/>
                        
                        <DeleteDog dog={dog}/>
                     </div>
